@@ -6,7 +6,8 @@ except ImportError:
 import requests
 import six
 
-from soundcloud import USER_AGENT
+__version__ = '0.5.0'
+USER_AGENT = 'SoundCloud Python API Wrapper %s' % __version__
 
 from . import hashconversions
 
