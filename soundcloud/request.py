@@ -6,7 +6,7 @@ except ImportError:
 import requests
 import six
 
-import soundcloud
+from soundcloud import USER_AGENT
 
 from . import hashconversions
 
@@ -104,7 +104,7 @@ def make_request(method, url, params):
     kwargs = {
         'allow_redirects': allow_redirects,
         'headers': {
-            'User-Agent': soundcloud.USER_AGENT
+            'User-Agent': USER_AGENT
         }
     }
     # options, not params
